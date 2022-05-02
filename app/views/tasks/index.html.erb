@@ -1,0 +1,19 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Body</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tasks.each do |task| %>
+      <tr>
+        <td><%= task.id %></td>
+        <td><%= task.body %></td>
+        
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Add Task', new_category_task_path(@category) %>

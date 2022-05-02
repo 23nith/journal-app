@@ -16,5 +16,9 @@ Rails.application.routes.draw do
 
   delete 'categories/:id', to: 'categories#destroy', as: 'delete_category'
 
+  resources :categories do
+    resources :tasks
+  end
+
 end
  

@@ -16,9 +16,20 @@
 </tbody>
 </table>
 <div>
+<ul>
+  <h3>"<%= @category.title %>" Tasks</h3>
+  <% @category.tasks.each do |task| %>
+    <li><%= task.body %> <%= link_to "show", category_task_path(task) %> </li> 
+  <% end %>
+  </ul>
+  <p>
+  <%= link_to "Add task", new_category_task_path(@category) %>
+  </p>
+
+
   <%= link_to "Back to categories", root_path %> |
 
-  <%= link_to "Edit", edit_category_path(@category) %>
+  <%= link_to "Edit Category", edit_category_path(@category) %>
 
   <%= button_to 'Delete', @category, confirm: 'Are you sure?', method: :delete %>
 </div>
