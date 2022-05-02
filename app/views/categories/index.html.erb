@@ -13,12 +13,12 @@
         <td><%= category.id %></td>
         <td><%= category.title %></td>
         <td><%= category.description %></td>
-        <td><%= link_to "show", category %></td>
-        <td><%= link_to "edit", edit_category_path(category) %></td>
+        <td><%= link_to "show tasks", category %></td>
+        <td><%= link_to "edit this category", edit_category_path(category) %></td>
         <td><%#= button_to 'delete', category, confirm: 'Are you sure?', method: :delete %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<%= link_to "Create New", new_category_path %>
+<%= link_to "Create New Category", new_category_path %>
