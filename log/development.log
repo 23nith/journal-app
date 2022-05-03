@@ -9764,3 +9764,106 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 304ms (Views: 267.6ms | ActiveRecord: 18.9ms | Allocations: 14382)
 
 
+Started GET "/" for ::1 at 2022-05-04 03:41:06 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (14.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 2.8ms | Allocations: 333)
+  Rendered layouts/_navbar.html.erb (Duration: 17.6ms | Allocations: 6090)
+  Rendered layout layouts/application.html.erb (Duration: 227.1ms | Allocations: 43947)
+Completed 500 Internal Server Error in 255ms (ActiveRecord: 0.0ms | Allocations: 47173)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `posts_path' for #<ActionView::Base:0x0000000000d958>
+
+          '.freeze;@output_buffer.append=(  link_to "Blog", posts_path, class:'nav-link' );@output_buffer.safe_append='
+                                                            ^^^^^^^^^^
+Did you mean?  password_path):
+    10:           <%= link_to "Home", root_path, class:'nav-link' %>
+    11:         </li>
+    12:         <li class="nav-item">
+    13:           <%=  link_to "Blog", posts_path, class:'nav-link' %>
+    14:         </li>
+    15:         <li class="nav-item">
+    16:           <%= link_to "About", about_path, class:'nav-link' %>
+  
+app/views/layouts/_navbar.html.erb:13
+app/views/layouts/application.html.erb:18
+Started GET "/" for ::1 at 2022-05-04 03:41:51 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.5ms | Allocations: 146)
+  Rendered user/_session_manager.html.erb (Duration: 6.2ms | Allocations: 520)
+  Rendered layouts/_navbar.html.erb (Duration: 12.7ms | Allocations: 965)
+  Rendered layouts/_alerts.html.erb (Duration: 1.9ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 4824)
+Completed 200 OK in 63ms (Views: 56.5ms | ActiveRecord: 0.0ms | Allocations: 5740)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-04 03:41:54 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 712)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 60.3ms | Allocations: 4607)
+  Rendered user/_session_manager.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layouts/_navbar.html.erb (Duration: 2.7ms | Allocations: 261)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 87.3ms | Allocations: 7402)
+Completed 200 OK in 182ms (Views: 96.9ms | ActiveRecord: 49.6ms | Allocations: 14595)
+
+
+Started GET "/" for ::1 at 2022-05-04 03:41:57 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 264)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3237)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 3553)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-04 03:42:03 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 978)
+  Rendered user/_session_manager.html.erb (Duration: 0.5ms | Allocations: 103)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 223)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 3541)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 4578)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-05-04 03:42:05 +0800
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 231)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 147)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 2002)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 261)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 27.0ms | Allocations: 4807)
+Completed 200 OK in 34ms (Views: 30.5ms | ActiveRecord: 0.0ms | Allocations: 6471)
+
+
+Started GET "/" for ::1 at 2022-05-04 03:42:07 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 18)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 264)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 3228)
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 3520)
+
+
