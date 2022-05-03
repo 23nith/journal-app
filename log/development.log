@@ -9867,3 +9867,68 @@ Processing by PagesController#home as HTML
 Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 3520)
 
 
+Started GET "/" for ::1 at 2022-05-04 03:46:47 +0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 26.6ms | Allocations: 1576)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 350)
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 774)
+  Rendered layouts/_alerts.html.erb (Duration: 5.2ms | Allocations: 209)
+  Rendered layout layouts/application.html.erb (Duration: 448.3ms | Allocations: 39366)
+Completed 200 OK in 519ms (Views: 470.1ms | ActiveRecord: 0.0ms | Allocations: 42649)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-04 03:46:53 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 712)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 113.1ms | Allocations: 4630)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 127)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 261)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 133.4ms | Allocations: 7425)
+Completed 200 OK in 173ms (Views: 138.9ms | ActiveRecord: 6.0ms | Allocations: 14630)
+
+
+Started GET "/users/password/new" for ::1 at 2022-05-04 03:46:58 +0800
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 232)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 189)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 7.9ms | Allocations: 1530)
+  Rendered user/_session_manager.html.erb (Duration: 0.4ms | Allocations: 127)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 261)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 4336)
+Completed 200 OK in 37ms (Views: 31.8ms | ActiveRecord: 0.0ms | Allocations: 5983)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-05-04 03:47:01 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 120)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 969)
+  Rendered user/_session_manager.html.erb (Duration: 0.4ms | Allocations: 103)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 223)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 3532)
+Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 0.0ms | Allocations: 4637)
+
+
+Started GET "/" for ::1 at 2022-05-04 03:47:05 +0800
+Processing by PagesController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  Rendered pages/home.html.erb within layouts/application (Duration: 1.0ms | Allocations: 675)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 84)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 204)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 31)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 3231)
+Completed 200 OK in 26ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 3509)
+
+
