@@ -2,6 +2,7 @@
   <thead>
     <tr>
       <th>ID</th>
+      <th>Name</th>
       <th>Body</th>
     </tr>
   </thead>
@@ -9,6 +10,7 @@
     <% @tasks.each do |task| %>
       <tr>
         <td><%= task.id %></td>
+        <td><%= task.name %></td>
         <td><%= task.body %></td>
         
       </tr>

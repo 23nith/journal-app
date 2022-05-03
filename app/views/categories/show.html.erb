@@ -19,7 +19,7 @@
 <ul>
   <h3>"<%= @category.title %>" Tasks</h3>
   <% @category.tasks.each do |task| %>
-    <li><%= task.body %> <%= link_to "show", category_task_path(task) %> </li> 
+    <li><%= task.name %> <%= link_to "show", category_task_path(task.id) %> </li> 
   <% end %>
   </ul>
   <p>
