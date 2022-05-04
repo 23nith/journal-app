@@ -17,9 +17,17 @@
 <div>
 <ul>
 
-  <%= link_to "Back", category_path %> |
+  <% if params[:category_id].present? %>
+    <%= link_to "Back", category_path(@task.category) %> |
+  <% else %>
+    <%= link_to "Back", tasks_path %> |
+  <% end %>
 
-  <%= link_to "Edit Task", edit_category_task_path(@task) %>
+  <% if @category %>
+    <%= link_to "Edit Task", edit_category_task_path(@task.category.id) %>
+  <% else %>
+    <%= link_to "Edit Task", edit_task_path %>
+  <% end %>
 
   <%= button_to 'Delete', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
 </div>

@@ -17,10 +17,13 @@ Rails.application.routes.draw do
   patch '/categories/:id' => "categories#update", as: "update_category"
 
   delete 'categories/:id', to: 'categories#destroy', as: 'delete_category'
-
+  
+  
   resources :categories do
     resources :tasks
   end
+  
+  resources :tasks
 
 end
  
