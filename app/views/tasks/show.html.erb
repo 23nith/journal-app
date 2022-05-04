@@ -31,5 +31,5 @@
     <%= link_to "Edit Task", edit_task_path %>
   <% end %>
 
-  <%= button_to 'Delete', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
+  <%= button_to 'Delete this task', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
 </div>
