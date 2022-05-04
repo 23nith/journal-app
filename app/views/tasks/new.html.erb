@@ -35,4 +35,6 @@
 <% end %>
 <% if @category != nil %>
   <%= link_to "Back", category_path(@category) %>
+<% else %>
+  <%= link_to "Back", tasks_path %>
 <% end %>

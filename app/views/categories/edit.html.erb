@@ -3,3 +3,5 @@
 <%= render "form", category: @category %>
 
 <%= link_to "Back to category", category_path %>
+
+<%= button_to 'Delete', @category, confirm: 'Are you sure?', method: :delete %>
