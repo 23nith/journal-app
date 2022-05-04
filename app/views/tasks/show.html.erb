@@ -12,7 +12,7 @@
   <td><%= @task.id %></td>
   <td><%= @task.name %></td>
   <td><%= @task.body %></td>
-  <td><%= @task.category.title %></td>
+  <td><%= link_to @task.category.title, category_path(@task.category) %></td>
 </tr>
 </tbody>
 </table>

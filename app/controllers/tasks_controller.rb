@@ -46,7 +46,11 @@ class TasksController < ApplicationController
     if @task.save!
       # redirect_to category_tasks_path
       # redirect_to category_path(@category.id)
-      redirect_to tasks_path
+      if params[:category_id].present?
+        redirect_to category_path(@category.id)
+      else
+        redirect_to tasks_path
+      end
     else
       render :new
     end
@@ -72,10 +76,14 @@ class TasksController < ApplicationController
     if params[:category_id].present?
       @task = @category.tasks.find(params[:id])
     else
-      @task = Tasks.find(params[:id])
+      @task = Task.find(params[:id])
     end
     @task.destroy
-    redirect_to category_path(@category.id)
+    if params[:category_id].present?
+      redirect_to category_path(@category.id)
+    else
+      redirect_to tasks_path
+    end
   end
 
   private
