@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
+  root 'pages#home'
+  devise_for :users
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "categories#index"
+  # root "categories#index"
 
   get '/categories' => 'categories#index'
 
@@ -15,10 +17,13 @@ Rails.application.routes.draw do
   patch '/categories/:id' => "categories#update", as: "update_category"
 
   delete 'categories/:id', to: 'categories#destroy', as: 'delete_category'
-
+  
+  
   resources :categories do
     resources :tasks
   end
+  
+  resources :tasks
 
 end
  

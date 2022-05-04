@@ -2,51 +2,105 @@ class TasksController < ApplicationController
   before_action :get_category
 
   def index
-    @tasks = @category.tasks
+    if params[:category_id].present?
+      @tasks = @category.tasks
+    else
+      # @tasks = Task.all
+      @tasks = Task.order(params[:sort])
+    end
   end
 
   def show
-    @task = @category.tasks.find(params[:id])
+    if params[:category_id].present?
+      @task = @category.tasks.find(params[:id])
+    else
+      @task = Task.find(params[:id])
+    end
   end
 
   def new
-    @task = @category.tasks.build
+    if params[:category_id].present?
+      @task = @category.tasks.build
+    else
+      @task = Task.new(task_params)
+    end
+    @categories = Category.all
   end
 
   def edit
-    @task = @category.tasks.find(params[:id])
+    if @category == nil
+      @task = Task.find(params[:id])
+    else
+      @task = @category.tasks.find(params[:id])
+    end
+    @categories = Category.all
   end
 
   def create
-    @task = @category.tasks.build(task_params)
-    if @task.save
+    @categories = Category.all
+    if @category == nil
+      @task = Task.new(task_params)
+    else
+      @task = @category.tasks.build(task_params)
+    end
+    if @task.save!
       # redirect_to category_tasks_path
-      redirect_to category_path(@category.id)
+      # redirect_to category_path(@category.id)
+      if params[:category_id].present?
+        redirect_to category_path(@category.id)
+      else
+        redirect_to tasks_path
+      end
     else
       render :new
     end
   end
 
   def update
-    @task = @category.tasks.find(params[:id])
+    if params[:category_id].present?
+      @task = @category.tasks.find(params[:id])
+    else
+      @task = Task.find(params[:id])
+    end
+
     if @task.update(task_params)
-      redirect_to category_path(@category.id)
+      if params[:category_id].present?
+        redirect_to category_path(@category.id)
+      else
+        redirect_to tasks_path
+      end
     end
   end
 
   def destroy 
-    @task = @category.tasks.find(params[:id])
+    if params[:category_id].present?
+      @task = @category.tasks.find(params[:id])
+    else
+      @task = Task.find(params[:id])
+    end
     @task.destroy
-    redirect_to category_path(@category.id)
+    if params[:category_id].present?
+      redirect_to category_path(@category.id)
+    else
+      redirect_to tasks_path
+    end
   end
 
   private
   
   def get_category
-    @category = Category.find(params[:category_id])
+    if params[:category_id].present?
+      @category = Category.find(params[:category_id])
+    else
+      @category = nil
+    end
   end
 
   def task_params
-    params.require(:task).permit(:body, :category_id)
+    if params[:task].present?
+      params.require(:task).permit(:id, :name, :body, :category_id, :user_id)
+    else
+      params.permit(:id, :name, :body, :category_id, :user_id)
+    end
   end
 end

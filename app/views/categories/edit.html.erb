@@ -1,5 +1,12 @@
 <h1>edit category</h1>
 
 <%= render "form", category: @category %>
+<p>
+  <%= link_to "Back to category", category_path %>
+</p>
+<p>
+  <%= link_to "Back to categories", categories_path %>
+</p>
 
-<%= link_to "Back to category lists", root_path %>
+
+<%= button_to 'Delete', @category, confirm: 'Are you sure?', method: :delete %>
