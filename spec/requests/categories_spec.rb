@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'CategoriesControllers', type: :request do
   describe "GET /Categories/new" do
+    before do
+      sign_in build(:user)
+    end
     it "returns the new page" do
       get "/categories/new"
 
@@ -11,6 +14,9 @@ RSpec.describe 'CategoriesControllers', type: :request do
   
   #POST Category
   describe "POST /Categories" do
+    before do
+      sign_in build(:user)
+    end
     it "creates a new page" do
       expect { post "/categories", params: {category: {title: "New Category", description: "Fresh na fresh"}} }.to \
       change(Category, :count)
@@ -22,6 +28,9 @@ RSpec.describe 'CategoriesControllers', type: :request do
 
   #EDIT Category
   describe "GET /Categories/1/edit" do
+    before do
+      sign_in build(:user)
+    end
     it "returns the edit page" do
       category = Category.create!(title: "New Category", description: "Fresh na fresh")
 
@@ -33,6 +42,9 @@ RSpec.describe 'CategoriesControllers', type: :request do
 
   #Update Category
   describe "PATCH /Categories/1" do
+    before do
+      sign_in build(:user)
+    end
     it "returns the edit page" do
       category = Category.create!(title: "New Category", description: "Fresh na fresh")
 
