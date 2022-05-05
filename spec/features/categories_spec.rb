@@ -2,6 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Categories', type: :feature do
   describe 'View all Category' do
+    before do
+      sign_in build(:user)
+    end
       before { visit new_category_path }
   
       it 'show new page' do
@@ -13,6 +16,9 @@ RSpec.describe 'Categories', type: :feature do
   end
 
   describe 'Fillup form and submit' do
+      before do
+        sign_in build(:user)
+      end
       before { visit new_category_path }
   
       it 'submits the form' do
@@ -28,6 +34,9 @@ RSpec.describe 'Categories', type: :feature do
   end
 
   describe 'Edit a category' do 
+    before do
+      sign_in build(:user)
+    end
 
     # category = Category.create!(title: "#{rand.to_s[1..9]} Category", description: "example description")
     

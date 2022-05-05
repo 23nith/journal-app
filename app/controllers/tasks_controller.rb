@@ -1,5 +1,6 @@
 class TasksController < ApplicationController
   before_action :get_category
+  before_action :authenticate_user!, except: %i[show index]
 
   def index
     if params[:category_id].present?

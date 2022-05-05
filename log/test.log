@@ -6162,3 +6162,1260 @@ Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms | Allocations: 2
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (2.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (11.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (11.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 14:03:57 +0800
+Processing by CategoriesController#new as HTML
+Completed 401 Unauthorized in 61ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (17.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:03:57 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 238)
+  [1m[36mCategory Count (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (12.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:03:57.783094"], ["updated_at", "2022-05-05 06:03:57.783094"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/42/edit" for 127.0.0.1 at 2022-05-05 14:03:57 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"42"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:03:57.809438"], ["updated_at", "2022-05-05 06:03:57.809438"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/43" for 127.0.0.1 at 2022-05-05 14:03:57 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"43"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 43], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:03:57.835546"], ["updated_at", "2022-05-05 06:03:57.835546"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/44" for 127.0.0.1 at 2022-05-05 14:03:57 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"44"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 44], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (16.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 44]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 150.0ms | Allocations: 4569)
+  Rendered user/_session_manager.html.erb (Duration: 20.8ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 44.8ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 6.8ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 565.1ms | Allocations: 40915)
+Completed 200 OK in 662ms (Views: 586.7ms | ActiveRecord: 18.4ms | Allocations: 43108)
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 14:04:12 +0800
+Processing by CategoriesController#new as HTML
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:04:12 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 238)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:04:12.436610"], ["updated_at", "2022-05-05 06:04:12.436610"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/45/edit" for 127.0.0.1 at 2022-05-05 14:04:12 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"45"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:04:12.451684"], ["updated_at", "2022-05-05 06:04:12.451684"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/46" for 127.0.0.1 at 2022-05-05 14:04:12 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"46"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 46], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:04:12.467919"], ["updated_at", "2022-05-05 06:04:12.467919"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/47" for 127.0.0.1 at 2022-05-05 14:04:12 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"47"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 47], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (0.8ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 47]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.0ms | Allocations: 4571)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 918)
+  Rendered layouts/_alerts.html.erb (Duration: 0.7ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 283.7ms | Allocations: 40889)
+Completed 200 OK in 301ms (Views: 287.7ms | ActiveRecord: 3.4ms | Allocations: 43079)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (3.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 14:48:17 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 77.9ms | Allocations: 2726)
+  Rendered categories/new.html.erb within layouts/application (Duration: 90.9ms | Allocations: 3283)
+  Rendered user/_session_manager.html.erb (Duration: 6.5ms | Allocations: 708)
+  Rendered layouts/_navbar.html.erb (Duration: 8.7ms | Allocations: 1195)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 194)
+  Rendered layout layouts/application.html.erb (Duration: 355.9ms | Allocations: 39962)
+Completed 200 OK in 411ms (Views: 363.5ms | ActiveRecord: 20.9ms | Allocations: 47151)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (8.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:48:18 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (13.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:18.196816"], ["updated_at", "2022-05-05 06:48:18.196816"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 23ms (ActiveRecord: 14.6ms | Allocations: 1903)
+  [1m[36mCategory Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (1.2ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:18.220403"], ["updated_at", "2022-05-05 06:48:18.220403"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/49/edit" for 127.0.0.1 at 2022-05-05 14:48:18 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 49], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.7ms | Allocations: 777)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 18.3ms | Allocations: 1086)
+  Rendered user/_session_manager.html.erb (Duration: 0.4ms | Allocations: 229)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 359)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 28)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 2994)
+Completed 200 OK in 33ms (Views: 26.5ms | ActiveRecord: 0.6ms | Allocations: 3785)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:18.264501"], ["updated_at", "2022-05-05 06:48:18.264501"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/50" for 127.0.0.1 at 2022-05-05 14:48:18 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"50"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 AND "categories"."id" != $2 LIMIT $3[0m  [["title", "New edited"], ["id", 50], ["LIMIT", 1]]
+  [1m[36mCategory Update (2.8ms)[0m  [1m[33mUPDATE "categories" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "categories"."id" = $4[0m  [["title", "New edited"], ["description", "edited na Fresh na fresh"], ["updated_at", "2022-05-05 06:48:18.271884"], ["id", 50]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 11ms (ActiveRecord: 3.9ms | Allocations: 1103)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 50], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:18.285370"], ["updated_at", "2022-05-05 06:48:18.285370"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/51" for 127.0.0.1 at 2022-05-05 14:48:18 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 51], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 51]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.0ms | Allocations: 4241)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 145)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 275)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 6065)
+Completed 200 OK in 42ms (Views: 32.3ms | ActiveRecord: 5.0ms | Allocations: 6568)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (6.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:48:38 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (2.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:38.248105"], ["updated_at", "2022-05-05 06:48:38.248105"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/52/edit" for 127.0.0.1 at 2022-05-05 14:48:38 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"52"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:38.268582"], ["updated_at", "2022-05-05 06:48:38.268582"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/53" for 127.0.0.1 at 2022-05-05 14:48:38 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"53"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 53], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:48:38.285780"], ["updated_at", "2022-05-05 06:48:38.285780"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/54" for 127.0.0.1 at 2022-05-05 14:48:38 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"54"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 54], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 54]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.5ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | Allocations: 918)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 286.2ms | Allocations: 40802)
+Completed 200 OK in 305ms (Views: 290.6ms | ActiveRecord: 3.3ms | Allocations: 42992)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:49:32 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:49:33.001465"], ["updated_at", "2022-05-05 06:49:33.001465"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/55/edit" for 127.0.0.1 at 2022-05-05 14:49:33 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"55"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:49:33.018214"], ["updated_at", "2022-05-05 06:49:33.018214"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/56" for 127.0.0.1 at 2022-05-05 14:49:33 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"56"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 56], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:49:33.033561"], ["updated_at", "2022-05-05 06:49:33.033561"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/57" for 127.0.0.1 at 2022-05-05 14:49:33 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"57"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 57], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 57]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.1ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.6ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 4.4ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 1.1ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 209.0ms | Allocations: 40750)
+Completed 200 OK in 228ms (Views: 214.0ms | ActiveRecord: 3.0ms | Allocations: 42940)
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:51:26 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.9ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:51:26.980740"], ["updated_at", "2022-05-05 06:51:26.980740"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/58/edit" for 127.0.0.1 at 2022-05-05 14:51:26 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"58"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:51:26.999865"], ["updated_at", "2022-05-05 06:51:26.999865"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/59" for 127.0.0.1 at 2022-05-05 14:51:27 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"59"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 59], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:51:27.017845"], ["updated_at", "2022-05-05 06:51:27.017845"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/60" for 127.0.0.1 at 2022-05-05 14:51:27 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"60"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 60], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 60]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.7ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.7ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 203.1ms | Allocations: 40913)
+Completed 200 OK in 222ms (Views: 207.5ms | ActiveRecord: 3.0ms | Allocations: 43104)
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (12.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:52:29 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:52:29.403663"], ["updated_at", "2022-05-05 06:52:29.403663"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/61/edit" for 127.0.0.1 at 2022-05-05 14:52:29 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"61"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:52:29.422108"], ["updated_at", "2022-05-05 06:52:29.422108"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/62" for 127.0.0.1 at 2022-05-05 14:52:29 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"62"}
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:52:29.438914"], ["updated_at", "2022-05-05 06:52:29.438914"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/63" for 127.0.0.1 at 2022-05-05 14:52:29 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"63"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 63]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.6ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.5ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 199.3ms | Allocations: 40694)
+Completed 200 OK in 220ms (Views: 206.4ms | ActiveRecord: 3.0ms | Allocations: 42885)
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:54:20 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:20.534547"], ["updated_at", "2022-05-05 06:54:20.534547"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/64/edit" for 127.0.0.1 at 2022-05-05 14:54:20 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"64"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:20.549872"], ["updated_at", "2022-05-05 06:54:20.549872"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/65" for 127.0.0.1 at 2022-05-05 14:54:20 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"65"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:20.564740"], ["updated_at", "2022-05-05 06:54:20.564740"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/66" for 127.0.0.1 at 2022-05-05 14:54:20 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"66"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 66]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 2.2ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 6.5ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 1.0ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 246.1ms | Allocations: 40913)
+Completed 200 OK in 265ms (Views: 250.8ms | ActiveRecord: 3.4ms | Allocations: 43104)
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:54:51 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:51.654354"], ["updated_at", "2022-05-05 06:54:51.654354"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/67/edit" for 127.0.0.1 at 2022-05-05 14:54:51 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"67"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:51.671928"], ["updated_at", "2022-05-05 06:54:51.671928"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/68" for 127.0.0.1 at 2022-05-05 14:54:51 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"68"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:54:51.689323"], ["updated_at", "2022-05-05 06:54:51.689323"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/69" for 127.0.0.1 at 2022-05-05 14:54:51 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 69]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.2ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 202.0ms | Allocations: 40918)
+Completed 200 OK in 222ms (Views: 208.2ms | ActiveRecord: 2.9ms | Allocations: 43109)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:56:58 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:56:58.404874"], ["updated_at", "2022-05-05 06:56:58.404874"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/70/edit" for 127.0.0.1 at 2022-05-05 14:56:58 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"70"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:56:58.422034"], ["updated_at", "2022-05-05 06:56:58.422034"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/71" for 127.0.0.1 at 2022-05-05 14:56:58 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"71"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:56:58.437791"], ["updated_at", "2022-05-05 06:56:58.437791"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/72" for 127.0.0.1 at 2022-05-05 14:56:58 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 72], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 72]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.0ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.4ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.5ms | Allocations: 918)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 281.2ms | Allocations: 40928)
+Completed 200 OK in 300ms (Views: 286.2ms | ActiveRecord: 2.9ms | Allocations: 43118)
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (10.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:58:51 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 20ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:58:51.547165"], ["updated_at", "2022-05-05 06:58:51.547165"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/73/edit" for 127.0.0.1 at 2022-05-05 14:58:51 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"73"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:58:51.564415"], ["updated_at", "2022-05-05 06:58:51.564415"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/74" for 127.0.0.1 at 2022-05-05 14:58:51 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"74"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 74], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:58:51.596065"], ["updated_at", "2022-05-05 06:58:51.596065"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/75" for 127.0.0.1 at 2022-05-05 14:58:51 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"75"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 75]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.6ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.3ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 1.1ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 201.9ms | Allocations: 40901)
+Completed 200 OK in 221ms (Views: 206.8ms | ActiveRecord: 3.2ms | Allocations: 43092)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 14:59:30 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms | Allocations: 2444)
+  [1m[36mCategory Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (1.0ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:59:30.891612"], ["updated_at", "2022-05-05 06:59:30.891612"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/76/edit" for 127.0.0.1 at 2022-05-05 14:59:30 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"76"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:59:30.907684"], ["updated_at", "2022-05-05 06:59:30.907684"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/77" for 127.0.0.1 at 2022-05-05 14:59:30 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"77"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 77], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 06:59:30.940919"], ["updated_at", "2022-05-05 06:59:30.940919"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/78" for 127.0.0.1 at 2022-05-05 14:59:30 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"78"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 78], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.3ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 78]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 27.1ms | Allocations: 4578)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 428)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | Allocations: 915)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 160)
+  Rendered layout layouts/application.html.erb (Duration: 199.2ms | Allocations: 40849)
+Completed 200 OK in 220ms (Views: 206.1ms | ActiveRecord: 3.1ms | Allocations: 43040)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:04:18 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 30.0ms | Allocations: 2707)
+  Rendered categories/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 3264)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 923)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 208.3ms | Allocations: 39479)
+Completed 200 OK in 246ms (Views: 215.4ms | ActiveRecord: 2.7ms | Allocations: 46368)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (10.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 15:04:18 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 321)
+  [1m[36mCategory Count (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:04:18.464397"], ["updated_at", "2022-05-05 07:04:18.464397"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/79/edit" for 127.0.0.1 at 2022-05-05 15:04:18 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"79"}
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:04:18.480084"], ["updated_at", "2022-05-05 07:04:18.480084"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/80" for 127.0.0.1 at 2022-05-05 15:04:18 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"80"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 80], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:04:18.497089"], ["updated_at", "2022-05-05 07:04:18.497089"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/81" for 127.0.0.1 at 2022-05-05 15:04:18 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"81"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 81], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 81]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 28.5ms | Allocations: 4282)
+  Rendered user/_session_manager.html.erb (Duration: 0.5ms | Allocations: 152)
+  Rendered layouts/_navbar.html.erb (Duration: 0.9ms | Allocations: 282)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 6113)
+Completed 200 OK in 43ms (Views: 35.8ms | ActiveRecord: 2.9ms | Allocations: 6646)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:05:10 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 17.3ms | Allocations: 2706)
+  Rendered categories/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 3263)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | Allocations: 923)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 196.2ms | Allocations: 39664)
+Completed 200 OK in 247ms (Views: 203.3ms | ActiveRecord: 2.6ms | Allocations: 46574)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 15:05:10 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:10.405433"], ["updated_at", "2022-05-05 07:05:10.405433"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 10ms (ActiveRecord: 2.0ms | Allocations: 1896)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:10.419898"], ["updated_at", "2022-05-05 07:05:10.419898"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/83/edit" for 127.0.0.1 at 2022-05-05 15:05:10 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"83"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 83], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.9ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1083)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 2900)
+Completed 200 OK in 23ms (Views: 16.8ms | ActiveRecord: 0.8ms | Allocations: 3703)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:10.458342"], ["updated_at", "2022-05-05 07:05:10.458342"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/84" for 127.0.0.1 at 2022-05-05 15:05:10 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"84"}
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 310)
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 84], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:10.498843"], ["updated_at", "2022-05-05 07:05:10.498843"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/85" for 127.0.0.1 at 2022-05-05 15:05:10 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"85"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 85], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.1ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 85]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 30.2ms | Allocations: 4242)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 152)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 282)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 6073)
+Completed 200 OK in 43ms (Views: 37.1ms | ActiveRecord: 2.8ms | Allocations: 6576)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:05:50 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 17.0ms | Allocations: 2706)
+  Rendered categories/new.html.erb within layouts/application (Duration: 20.2ms | Allocations: 3263)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.5ms | Allocations: 923)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 197.5ms | Allocations: 39660)
+Completed 200 OK in 248ms (Views: 204.6ms | ActiveRecord: 2.6ms | Allocations: 46551)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 15:05:50 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (2.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:50.533988"], ["updated_at", "2022-05-05 07:05:50.533988"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms | Allocations: 1896)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:50.547854"], ["updated_at", "2022-05-05 07:05:50.547854"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/87/edit" for 127.0.0.1 at 2022-05-05 15:05:50 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"87"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 87], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.9ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1083)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 2900)
+Completed 200 OK in 19ms (Views: 12.3ms | ActiveRecord: 0.6ms | Allocations: 3703)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:50.580372"], ["updated_at", "2022-05-05 07:05:50.580372"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/88" for 127.0.0.1 at 2022-05-05 15:05:50 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"88"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 AND "categories"."id" != $2 LIMIT $3[0m  [["title", "New edited"], ["id", 88], ["LIMIT", 1]]
+  [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "categories"."id" = $4[0m  [["title", "New edited"], ["description", "edited na Fresh na fresh"], ["updated_at", "2022-05-05 07:05:50.588850"], ["id", 88]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms | Allocations: 1115)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 88], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:05:50.600725"], ["updated_at", "2022-05-05 07:05:50.600725"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/89" for 127.0.0.1 at 2022-05-05 15:05:50 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"89"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 89], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.2ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 89]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.8ms | Allocations: 4238)
+  Rendered user/_session_manager.html.erb (Duration: 2.0ms | Allocations: 230)
+  Rendered layouts/_navbar.html.erb (Duration: 2.4ms | Allocations: 360)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 6147)
+Completed 200 OK in 42ms (Views: 34.8ms | ActiveRecord: 3.1ms | Allocations: 6650)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:06:49 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 19.3ms | Allocations: 2706)
+  Rendered categories/new.html.erb within layouts/application (Duration: 23.0ms | Allocations: 3263)
+  Rendered user/_session_manager.html.erb (Duration: 1.2ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.3ms | Allocations: 923)
+  Rendered layouts/_alerts.html.erb (Duration: 1.0ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 197.1ms | Allocations: 39640)
+Completed 200 OK in 251ms (Views: 218.4ms | ActiveRecord: 2.9ms | Allocations: 46530)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 15:06:49 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.8ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:06:49.665600"], ["updated_at", "2022-05-05 07:06:49.665600"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 9ms (ActiveRecord: 1.8ms | Allocations: 1896)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:06:49.676731"], ["updated_at", "2022-05-05 07:06:49.676731"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/91/edit" for 127.0.0.1 at 2022-05-05 15:06:49 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 91], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.9ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1083)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2900)
+Completed 200 OK in 19ms (Views: 12.6ms | ActiveRecord: 0.6ms | Allocations: 3703)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:06:49.708794"], ["updated_at", "2022-05-05 07:06:49.708794"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/92" for 127.0.0.1 at 2022-05-05 15:06:49 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"92"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 AND "categories"."id" != $2 LIMIT $3[0m  [["title", "New edited"], ["id", 92], ["LIMIT", 1]]
+  [1m[36mCategory Update (0.4ms)[0m  [1m[33mUPDATE "categories" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "categories"."id" = $4[0m  [["title", "New edited"], ["description", "edited na Fresh na fresh"], ["updated_at", "2022-05-05 07:06:49.719222"], ["id", 92]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms | Allocations: 1115)
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 92], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:06:49.729864"], ["updated_at", "2022-05-05 07:06:49.729864"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/93" for 127.0.0.1 at 2022-05-05 15:06:49 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"93"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.7ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 93]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 30.1ms | Allocations: 4238)
+  Rendered user/_session_manager.html.erb (Duration: 2.6ms | Allocations: 230)
+  Rendered layouts/_navbar.html.erb (Duration: 3.0ms | Allocations: 360)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 6147)
+Completed 200 OK in 46ms (Views: 38.8ms | ActiveRecord: 3.6ms | Allocations: 6650)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:10:58 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 17.5ms | Allocations: 2663)
+  Rendered categories/new.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3217)
+  Rendered user/_session_manager.html.erb (Duration: 1.4ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.4ms | Allocations: 922)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 191.3ms | Allocations: 39519)
+Completed 200 OK in 230ms (Views: 198.3ms | ActiveRecord: 2.7ms | Allocations: 46432)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:10:58 +0800
+Processing by CategoriesController#new as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 315)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 15:10:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 36.7ms | Allocations: 690)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 100.5ms | Allocations: 2671)
+  Rendered user/_session_manager.html.erb (Duration: 0.4ms | Allocations: 117)
+  Rendered layouts/_navbar.html.erb (Duration: 0.8ms | Allocations: 267)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 41)
+  Rendered layout layouts/application.html.erb (Duration: 108.8ms | Allocations: 4576)
+Completed 200 OK in 131ms (Views: 113.2ms | ActiveRecord: 0.0ms | Allocations: 6202)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (11.7ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "Edited Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (1.0ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Edited Category"], ["description", "example description"], ["created_at", "2022-05-05 07:10:58.840069"], ["updated_at", "2022-05-05 07:10:58.840069"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/94/edit" for 127.0.0.1 at 2022-05-05 15:10:58 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"94"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 228)
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-05-05 15:10:58 +0800
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 112)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 900)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 93)
+  Rendered layouts/_navbar.html.erb (Duration: 0.7ms | Allocations: 224)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 2668)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 3307)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:11:25 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 16.5ms | Allocations: 2663)
+  Rendered categories/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3217)
+  Rendered user/_session_manager.html.erb (Duration: 1.5ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | Allocations: 925)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 269.0ms | Allocations: 39576)
+Completed 200 OK in 307ms (Views: 275.9ms | ActiveRecord: 2.7ms | Allocations: 46469)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:11:25 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.3ms | Allocations: 665)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 725)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 9.7ms | Allocations: 2553)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.0ms | Allocations: 2867)
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "Edited Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Edited Category"], ["description", "example description"], ["created_at", "2022-05-05 07:11:25.853668"], ["updated_at", "2022-05-05 07:11:25.853668"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/95/edit" for 127.0.0.1 at 2022-05-05 15:11:25 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.7ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1074)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 2891)
+Completed 200 OK in 19ms (Views: 12.7ms | ActiveRecord: 0.7ms | Allocations: 3727)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:13:26 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 16.5ms | Allocations: 2662)
+  Rendered categories/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3216)
+  Rendered user/_session_manager.html.erb (Duration: 1.4ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.5ms | Allocations: 925)
+  Rendered layouts/_alerts.html.erb (Duration: 0.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 209.3ms | Allocations: 39628)
+Completed 200 OK in 248ms (Views: 216.2ms | ActiveRecord: 2.8ms | Allocations: 46519)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:13:26 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.3ms | Allocations: 665)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 725)
+  Rendered user/_session_manager.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 1.1ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 2553)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.0ms | Allocations: 2867)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (6.2ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "Edited Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (7.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Edited Category"], ["description", "example description"], ["created_at", "2022-05-05 07:13:26.625585"], ["updated_at", "2022-05-05 07:13:26.625585"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/96/edit" for 127.0.0.1 at 2022-05-05 15:13:26 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.6ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1075)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 2892)
+Completed 200 OK in 17ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 3728)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:14:04 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 16.8ms | Allocations: 2666)
+  Rendered categories/new.html.erb within layouts/application (Duration: 32.5ms | Allocations: 3159)
+  Rendered user/_session_manager.html.erb (Duration: 1.4ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 3.6ms | Allocations: 945)
+  Rendered layouts/_alerts.html.erb (Duration: 1.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 210.2ms | Allocations: 39589)
+Completed 200 OK in 248ms (Views: 216.9ms | ActiveRecord: 2.6ms | Allocations: 46481)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:14:05 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.5ms | Allocations: 665)
+  Rendered categories/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 708)
+  Rendered user/_session_manager.html.erb (Duration: 0.3ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.6ms | Allocations: 271)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 2537)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.0ms | Allocations: 2851)
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (2.1ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "Edited Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.6ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Edited Category"], ["description", "example description"], ["created_at", "2022-05-05 07:14:05.366118"], ["updated_at", "2022-05-05 07:14:05.366118"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/97/edit" for 127.0.0.1 at 2022-05-05 15:14:05 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"97"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 97], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.6ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1076)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2893)
+Completed 200 OK in 18ms (Views: 11.3ms | ActiveRecord: 0.6ms | Allocations: 3729)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+Started GET "/categories/new" for 127.0.0.1 at 2022-05-05 15:14:32 +0800
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 19.4ms | Allocations: 2706)
+  Rendered categories/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 3263)
+  Rendered user/_session_manager.html.erb (Duration: 4.1ms | Allocations: 439)
+  Rendered layouts/_navbar.html.erb (Duration: 6.2ms | Allocations: 923)
+  Rendered layouts/_alerts.html.erb (Duration: 3.8ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 225.2ms | Allocations: 39620)
+Completed 200 OK in 265ms (Views: 232.3ms | ActiveRecord: 3.2ms | Allocations: 46510)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategory Count (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+Started POST "/categories" for 127.0.0.1 at 2022-05-05 15:14:32 +0800
+Processing by CategoriesController#create as HTML
+  Parameters: {"category"=>{"title"=>"New Category", "description"=>"Fresh na fresh"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.7ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:14:32.586793"], ["updated_at", "2022-05-05 07:14:32.586793"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms | Allocations: 1896)
+  [1m[36mCategory Count (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "categories"[0m
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:14:32.599478"], ["updated_at", "2022-05-05 07:14:32.599478"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/99/edit" for 127.0.0.1 at 2022-05-05 15:14:32 +0800
+Processing by CategoriesController#edit as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 99], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/edit.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.4ms | Allocations: 774)
+  Rendered categories/edit.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1086)
+  Rendered user/_session_manager.html.erb (Duration: 0.2ms | Allocations: 140)
+  Rendered layouts/_navbar.html.erb (Duration: 0.5ms | Allocations: 270)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 27)
+  Rendered layout layouts/application.html.erb (Duration: 10.3ms | Allocations: 2909)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 3712)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:14:32.629424"], ["updated_at", "2022-05-05 07:14:32.629424"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started PATCH "/categories/100" for 127.0.0.1 at 2022-05-05 15:14:32 +0800
+Processing by CategoriesController#update as HTML
+  Parameters: {"category"=>{"title"=>"New edited", "description"=>"edited na Fresh na fresh"}, "id"=>"100"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 AND "categories"."id" != $2 LIMIT $3[0m  [["title", "New edited"], ["id", 100], ["LIMIT", 1]]
+  [1m[36mCategory Update (0.5ms)[0m  [1m[33mUPDATE "categories" SET "title" = $1, "description" = $2, "updated_at" = $3 WHERE "categories"."id" = $4[0m  [["title", "New edited"], ["description", "edited na Fresh na fresh"], ["updated_at", "2022-05-05 07:14:32.638293"], ["id", 100]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/categories
+Completed 302 Found in 7ms (ActiveRecord: 1.7ms | Allocations: 1115)
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 100], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCategory Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "categories" WHERE "categories"."title" = $1 LIMIT $2[0m  [["title", "New Category"], ["LIMIT", 1]]
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("title", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "New Category"], ["description", "Fresh na fresh"], ["created_at", "2022-05-05 07:14:32.649116"], ["updated_at", "2022-05-05 07:14:32.649116"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/categories/101" for 127.0.0.1 at 2022-05-05 15:14:32 +0800
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTask Load (1.0ms)[0m  [1m[34mSELECT "tasks".* FROM "tasks" WHERE "tasks"."category_id" = $1[0m  [["category_id", 101]]
+  Rendered categories/show.html.erb within layouts/application (Duration: 26.6ms | Allocations: 4238)
+  Rendered user/_session_manager.html.erb (Duration: 2.2ms | Allocations: 230)
+  Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 360)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+  Rendered layout layouts/application.html.erb (Duration: 36.3ms | Allocations: 6147)
+Completed 200 OK in 41ms (Views: 34.4ms | ActiveRecord: 2.8ms | Allocations: 6650)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
