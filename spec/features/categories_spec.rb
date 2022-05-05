@@ -17,12 +17,14 @@ RSpec.describe 'Categories', type: :feature do
 
   describe 'Fillup form and submit' do
       before do
-        sign_in build(:user)
+        sign_in create(:user)
       end
       before { visit new_category_path }
   
       it 'submits the form' do
-        within 'form' do
+        within(all('form')[1]) do
+        # within('form', :match => :first) do
+        # within 'form' do
           fill_in 'category_title', with: 'Example Title'
           fill_in 'category_description', with: 'Example description'
           expect{click_on 'Create Category'}.to change(Category, :count).by(1)
@@ -35,7 +37,7 @@ RSpec.describe 'Categories', type: :feature do
 
   describe 'Edit a category' do 
     before do
-      sign_in build(:user)
+      sign_in create(:user)
     end
 
     # category = Category.create!(title: "#{rand.to_s[1..9]} Category", description: "example description")
@@ -45,7 +47,8 @@ RSpec.describe 'Categories', type: :feature do
     before { visit "/categories/#{category.id}/edit" }
 
     it 'edits a category and submits the form' do
-      within 'form' do
+      within(all('form')[1]) do
+      # within 'form' do
         fill_in 'category_title', with: "New edited"
         fill_in 'category_description', with: "edited na example description"
         # click_on 'Update Category'

@@ -1,6 +1,7 @@
 class TasksController < ApplicationController
   before_action :get_category
-  before_action :authenticate_user!, except: %i[show index]
+  before_action :authenticate_user!, except: %i[ index]
+  before_action :correct_user, only: [:edit, :update, :destroy, :show]
 
   def index
     if params[:category_id].present?
@@ -15,6 +16,7 @@ class TasksController < ApplicationController
     if params[:category_id].present?
       @task = @category.tasks.find(params[:id])
     else
+      # @task = Task.find(params[:id])
       @task = Task.find(params[:id])
     end
   end
@@ -88,6 +90,11 @@ class TasksController < ApplicationController
   end
 
   private
+
+  def correct_user
+    @task = current_user.tasks.find_by(id: params[:id])
+    redirect_to root_path, notice: "You are not authorized to access that task" if @task.nil?
+  end  
   
   def get_category
     if params[:category_id].present?
