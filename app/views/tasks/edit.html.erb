@@ -32,7 +32,10 @@
 
 <% if @category %>
   <%= link_to "Back", category_task_path(@category) %>
+  <%= button_to 'Delete this task', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
 <% else %>
   <%= link_to "Back", tasks_path %>  
+  <%= button_to 'Delete this task', task_path(@task), confirm: 'Are you sure?', method: :delete %>
 <% end %>
 
+<%#= button_to 'Delete this task', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
