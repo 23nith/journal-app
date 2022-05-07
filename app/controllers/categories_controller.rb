@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, except: %i[index]
+  # before_action :authenticate_user!, except: %i[index]
+  before_action :authenticate_user!
+  # before_action :correct_user, only: [:edit, :update, :destroy, :show]
 
   def index
     @categories = Category.all

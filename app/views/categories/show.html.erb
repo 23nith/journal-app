@@ -4,7 +4,9 @@
 <p class="ms-5"> <%= @category.description %></p>
   <ul class="list-group">
     <% @category.tasks.each do |task| %>
-      <li class="list-group-item"><%= task.name %> &nbsp; &nbsp; <%= link_to "show details", category_task_path(task.category, task) %> </li> 
+      <% if task.user == current_user %>
+        <li class="list-group-item"><%= task.name %> &nbsp; &nbsp; <%= link_to "show details", category_task_path(task.category, task) %> </li> 
+      <% end %>
     <% end %>
   </ul>
   <p class="ms-5 mt-3">
