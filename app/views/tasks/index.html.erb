@@ -3,7 +3,7 @@
   <thead>
     <th><%= link_to "ID", :sort => "id" %></th>
     <th><%= link_to "Name", :sort => "name" %></th>
-    <th><%= link_to "Body", :sort => "body" %></th>
+    
     <th><%= link_to "Category", :sort => "category_id" %></th>
     <th>Actions</th>
   </thead>
@@ -13,7 +13,7 @@
     <tr>
       <td><%= task.id %></td>
       <td><%= link_to task.name, task_path(task.id) %></td>
-      <td><%= task.body %></td>
+     
       <td><%= link_to task.category.title, category_path(task.category.id) %></td>
       <td><%= button_to "Delete", task_path(task), method: :delete %></td>
       <td><%= link_to "Edit", edit_task_path(task) %></td>
