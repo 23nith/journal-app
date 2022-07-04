@@ -32,7 +32,7 @@
           class="img-fluid" alt="Sample image">
       </div>
       <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-
+        <h1>Journal App</h1>
         <% if current_user %>
           <p>Hello <%= current_user.email %>!</p>
           
@@ -122,7 +122,7 @@
     class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
     <!-- Copyright -->
     <div class="text-white mb-3 mb-md-0">
-      Copyright © 2020. All rights reserved.
+      Copyright © <%= Date.today.year %>. All rights reserved.
     </div>
     <!-- Copyright -->
 
