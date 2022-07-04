@@ -1,3 +1,7 @@
+<%
+=begin
+%>
+
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -14,3 +18,39 @@
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+<%
+=end
+%>
+
+<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+  <div class="container-fluid" style="height: 30vh!important">
+  <div class="" style="margin-top: 20vh" >
+      <div class="rounded d-flex justify-content-center">
+          <div class="col-md-4 col-sm-12 shadow-lg p-5 bg-light">
+              <div class="text-center">
+                  <h3 class="text-primary">Forgot your password?</h3>
+              </div>
+              <form action="">
+                  <div class="p-4">
+
+                      <div class="input-group mb-3">
+                          <span class="input-group-text bg-primary"><i
+                                  class="bi bi-person-plus-fill text-white"></i></span>
+                          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "email" %>
+
+                      </div>
+
+                      <div class="d-flex justify-content-center">
+                      <%= f.submit "Send me reset password instructions", class: "btn btn-primary text-center mt-2" %>
+                      </div>
+                      <br/>
+                      <%= render "devise/shared/links" %>
+
+                  </div>
+
+              </form>
+          </div>
+      </div>
+  </div>
+<% end %>
