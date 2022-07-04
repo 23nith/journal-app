@@ -1,22 +1,24 @@
-<p style="color: green"><%= notice %></p>
-<div>
-<h3>"<%= @category.title %>" Tasks</h3>
-<p class="ms-5"> <%= @category.description %></p>
-  <ul class="list-group">
-    <% @category.tasks.each do |task| %>
-      <% if task.user == current_user %>
-        <li class="list-group-item"><%= task.name %> &nbsp; &nbsp; <%= link_to "show details", category_task_path(task.category, task) %> </li> 
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <div>
+  <h3>"<%= @category.title %>" Tasks</h3>
+  <p class="ms-5"> <%= @category.description %></p>
+    <ul class="list-group">
+      <% @category.tasks.each do |task| %>
+        <% if task.user == current_user %>
+          <li class="list-group-item"><%= task.name %> &nbsp; &nbsp; <%= link_to "show details", category_task_path(task.category, task) %> </li> 
+        <% end %>
       <% end %>
-    <% end %>
-  </ul>
-  <p class="ms-5 mt-3">
-  <%= link_to "Add task", new_category_task_path(@category) %>
-  </p>
+    </ul>
+    <p class="ms-5 mt-3">
+    <%= link_to "Add task", new_category_task_path(@category) %>
+    </p>
 
-  
-  <%= link_to "Back to categories", categories_path %> |
+    
+    <%= link_to "Back to categories", categories_path %> |
 
-  <%= link_to "Edit Category", edit_category_path(@category) %>
+    <%= link_to "Edit Category", edit_category_path(@category) %>
 
-  <%= button_to 'Delete this category', @category, confirm: 'Are you sure?', method: :delete %>
+    <%= button_to 'Delete this category', @category, confirm: 'Are you sure?', method: :delete %>
+  </div>
 </div>

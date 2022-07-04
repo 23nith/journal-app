@@ -1,12 +1,15 @@
-<h1>edit category</h1>
+<div class="container">
+  <h1>edit category</h1>
 
-<%= render "form", category: @category %>
-<p>
-  <%= link_to "Back to category", category_path %>
-</p>
-<p>
-  <%= link_to "Back to categories", categories_path %>
-</p>
+  <%= render "form", category: @category %>
+  <p>
+    <%= link_to "Back to category", category_path %>
+  </p>
+  <p>
+    <%= link_to "Back to categories", categories_path %>
+  </p>
 
 
-<%= button_to 'Delete', @category, confirm: 'Are you sure?', method: :delete %>
+  <%= button_to 'Delete', @category, confirm: 'Are you sure?', method: :delete %>
+  
+</div>
