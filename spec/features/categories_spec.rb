@@ -23,14 +23,11 @@ RSpec.describe 'Categories', type: :feature do
   
       it 'submits the form' do
         within(all('form')[1]) do
-        # within('form', :match => :first) do
-        # within 'form' do
           fill_in 'category_title', with: 'Example Title'
           fill_in 'category_description', with: 'Example description'
           expect{click_on 'Create Category'}.to change(Category, :count).by(1)
         end
 
-        # expect(page).to have_selector(:link_or_button, 'Create Category') 
       end
     
   end
@@ -48,16 +45,13 @@ RSpec.describe 'Categories', type: :feature do
 
     it 'edits a category and submits the form' do
       within(all('form')[1]) do
-      # within 'form' do
         fill_in 'category_title', with: "New edited"
         fill_in 'category_description', with: "edited na example description"
-        # click_on 'Update Category'
         click_button('Update Category', exact: true)
       end
       
       edited_category = Category.find(category.id)
       expect(edited_category.title).to eq "New edited"
-      # expect(page).to have_selector(:link_or_button, 'Create Category')
     end
 
   end

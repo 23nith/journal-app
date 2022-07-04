@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
-  before_action :authenticate_user!, except: %i[show index]
+  # before_action :authenticate_user!, except: %i[index]
+  before_action :authenticate_user!
+  # before_action :correct_user, only: [:edit, :update, :destroy, :show]
 
   def index
     @categories = Category.all
@@ -36,7 +38,8 @@ class CategoriesController < ApplicationController
   def destroy
     @category = Category.find(params[:id])
     @category.destroy
-    redirect_to root_path
+    # redirect_to root_path
+    redirect_to categories_path
   end
 
   private

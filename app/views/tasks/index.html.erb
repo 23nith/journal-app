@@ -1,31 +1,33 @@
-<h1>Tasks</h1>
-<table class="table">
-  <thead>
-    <th><%= link_to "ID", :sort => "id" %></th>
-    <th><%= link_to "Name", :sort => "name" %></th>
-    <th><%= link_to "Body", :sort => "body" %></th>
-    <th><%= link_to "Category", :sort => "category_id" %></th>
-    <th>Actions</th>
-  </thead>
-  <tbody>
-<% @tasks.each do |task| %>
-  <% if task.user == current_user %>
-    <tr>
-      <td><%= task.id %></td>
-      <td><%= link_to task.name, task_path(task.id) %></td>
-      <td><%= task.body %></td>
-      <td><%= link_to task.category.title, category_path(task.category.id) %></td>
-      <td><%= button_to "Delete", task_path(task), method: :delete %></td>
-      <td><%= link_to "Edit", edit_task_path(task) %></td>
-    </tr>
+<div class="container">
+  <h1>Tasks</h1>
+  <table class="table">
+    <thead>
+      <th><%= link_to "ID", :sort => "id" %></th>
+      <th><%= link_to "Name", :sort => "name" %></th>
+      
+      <th><%= link_to "Category", :sort => "category_id" %></th>
+      <th>Actions</th>
+    </thead>
+    <tbody>
+  <% @tasks.each do |task| %>
+    <% if task.user == current_user %>
+      <tr>
+        <td><%= task.id %></td>
+        <td><%= link_to task.name, task_path(task.id) %></td>
+      
+        <td><%= link_to task.category.title, category_path(task.category.id) %></td>
+        <td><%= button_to "Delete", task_path(task), method: :delete %></td>
+        <td><%= link_to "Edit", edit_task_path(task) %></td>
+      </tr>
+    <% end %>
   <% end %>
-<% end %>
-  </tbody>
-</table>
+    </tbody>
+  </table>
 
-<br>
+  <br>
 
-<%= link_to "Add New Task", new_task_path %>
-<p>
-<%= link_to "Category list", categories_path %>
-</p>
+  <%= link_to "Add New Task", new_task_path %>
+  <p>
+  <%= link_to "Category list", categories_path %>
+  </p>
+</div>

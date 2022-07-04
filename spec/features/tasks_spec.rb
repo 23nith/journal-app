@@ -24,14 +24,12 @@ RSpec.describe 'Tasks', type: :feature do
   
       it 'submits the form' do
         within(all('form')[1]) do
-        # within 'form' do
           fill_in 'task_name', with: 'Example name'
           fill_in 'task_body', with: 'Example body'
           select("Edited Category", from: "task_category_id").select_option
           expect{click_on 'Create Task'}.to change(Task, :count).by(1)
         end
 
-        # expect(page).to have_selector(:link_or_button, 'Create Category') 
       end
     
   end
@@ -49,7 +47,6 @@ RSpec.describe 'Tasks', type: :feature do
 
     it 'edits a task and submits the form' do
       within(all('form')[1]) do
-      # within 'form' do
         fill_in 'task_name', with: "New edited"
         fill_in 'task_body', with: "edited na example description"
         select("Edited Category", from: "task_category_id").select_option
@@ -58,7 +55,6 @@ RSpec.describe 'Tasks', type: :feature do
       
       edited_task = Task.find(task.id)
       expect(edited_task.name).to eq "New edited"
-      # expect(page).to have_selector(:link_or_button, 'Create Category')
     end
 
   end

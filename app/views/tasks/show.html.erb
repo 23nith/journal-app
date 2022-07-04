@@ -1,35 +1,38 @@
-<table class="table"> 
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Category</th>
-    </tr>
-  </thead>
-  <tbody>
-<tr>
-  <td><%= @task.id %></td>
-  <td><%= @task.name %></td>
-  <td><%= @task.body %></td>
-  <td><%= link_to @task.category.title, category_path(@task.category) %></td>
-</tr>
-</tbody>
-</table>
-<div>
-<ul>
+<div class="container">
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Category</th>
+      </tr>
+    </thead>
+    <tbody>
+  <tr>
+    <td><%= @task.id %></td>
+    <td><%= @task.name %></td>
+    <td><%= @task.body %></td>
+    <td><%= link_to @task.category.title, category_path(@task.category) %></td>
+  </tr>
+  </tbody>
+  </table>
+  <div>
+  <ul>
 
-  <% if params[:category_id].present? %>
-    <%= link_to "Back", category_path(@task.category) %> |
-  <% else %>
-    <%= link_to "Back", tasks_path %> |
-  <% end %>
+    <% if params[:category_id].present? %>
+      <%= link_to "Back", category_path(@task.category) %> |
+    <% else %>
+      <%= link_to "Back", tasks_path %> |
+    <% end %>
 
-  <% if @category %>
-    <%= link_to "Edit Task", edit_category_task_path(@task.category.id) %>
-  <% else %>
-    <%= link_to "Edit Task", edit_task_path %>
-  <% end %>
-
-  <%= button_to 'Delete this task', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
+    <% if @category %>
+      <%= link_to "Edit Task", edit_category_task_path(@task.category.id) %>
+      <%= button_to 'Delete this task', category_task_path(@task), confirm: 'Are you sure?', method: :delete %>
+    <% else %>
+      <%= link_to "Edit Task", edit_task_path %>
+      <%= button_to 'Delete this task', task_path(@task), confirm: 'Are you sure?', method: :delete %>
+    <% end %>
+    
+  </div>
 </div>

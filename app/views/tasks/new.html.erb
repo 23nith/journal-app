@@ -1,40 +1,42 @@
-<%= form_with model: [@category, @task] , local: true do |f| %>
-  <p>
-    <% if @task.errors.any? %>
-      <ul>
-        <% @task.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    <% end %>
-  </p>
+<div class="container">
+  <%= form_with model: [@category, @task] , local: true do |f| %>
+    <p>
+      <% if @task.errors.any? %>
+        <ul>
+          <% @task.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      <% end %>
+    </p>
 
-  <p>
-    <%= f.label :name %><br/>
-    <%= f.text_field :name %>
-  </p>
+    <p>
+      <%= f.label :name %><br/>
+      <%= f.text_field :name %>
+    </p>
 
-  <p>
-    <%= f.label :body %><br/>
-    <%= f.text_field :body %>
-  </p>
-  
-  <p>
-    <%= f.label :category_id %> 
-    <%= f.select :category_id, @categories.map { |c| [c.title, c.id] } %>
-  </p>
+    <p>
+      <%= f.label :body %><br/>
+      <%= f.text_field :body %>
+    </p>
+    
+    <p>
+      <%= f.label :category_id %> 
+      <%= f.select :category_id, @categories.map { |c| [c.title, c.id] } %>
+    </p>
 
-  <p>
-    <%= f.number_field :user_id, id: :task_user_id, value:current_user.id, type: :hidden %>
-  </p>
+    <p>
+      <%= f.number_field :user_id, id: :task_user_id, value:current_user.id, type: :hidden %>
+    </p>
 
-  <p>
-    <%= f.submit %>
-  </p>
+    <p>
+      <%= f.submit %>
+    </p>
 
-<% end %>
-<% if @category != nil %>
-  <%= link_to "Back", category_path(@category) %>
-<% else %>
-  <%= link_to "Back", tasks_path %>
-<% end %>
+  <% end %>
+  <% if @category != nil %>
+    <%= link_to "Back", category_path(@category) %>
+  <% else %>
+    <%= link_to "Back", tasks_path %>
+  <% end %>
+</div>
